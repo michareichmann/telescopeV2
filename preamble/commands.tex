@@ -1,0 +1,41 @@
+\newcommand{\li}{\left|}
+\newcommand{\re}{\right|}
+\newcommand{\const}{\text{const.}}
+\newcommand{\z}{\text}
+\newcommand{\terminal}[1]{\colorbox{black}{\textcolor{white}{{\fontfamily{phv}\selectfont \scriptsize{#1}}}}}
+\newcommand{\plugin}[1]{\textit{\flq#1\frq}}
+\newcommand{\ra}{$\rightarrow$ }
+\newcommand{\ar}{\autoref}
+\newcommand{\good}[1]{{\usebeamercolor[fg]{title}{\textbf{#1}}}}
+\newcommand{\bad}[1]{\textcolor{RedOrange}{\textbf{#1}}}
+\newcommand{\dead}[1]{\textcolor{NavyBlue}{\textbf{#1}}}
+\newcommand{\cmark}{\good{\ding{51}}}
+\newcommand{\xmark}{\bad{\ding{55}}}
+\newcommand{\itemfill}{\setlength{\itemsep}{\fill}}
+\newcommand{\orderof}[1]{$\mathcal{O}\left(#1\right)$}
+\newcommand{\code}[1]{{\footnotesize\dejavu #1}}
+\newcommand{\var}[1]{\textcolor{JungleGreen}{#1}}
+\newcommand{\meth}[1]{\textcolor{RedOrange}{#1}}
+\newcommand{\incl}[1]{\textcolor{YellowGreen!70!RawSienna!100}{#1}}
+\newcommand{\str}[1]{\textcolor{MidnightBlue!60!black!100}{#1}}
+\newcommand{\tline}[1]{\noalign{\hrule height #1pt}}
+\newcommand{\fatwhite}[1]{\multicolumn{1}{c}{\textcolor{white}{\textbf{#1}}}}
+\renewcommand{\deg}{$^{\circ}$}
+\newcommand{\fpath}[1]{\textbf{\path{#1}}}
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\newcommand{\alternatecolors}{\rowcolors{2}{YellowOrange!10}{ProcessBlue!10}}
+\newcommand{\missfig}[1][.5]{\begin{center} \missingfigure[figheight=#1\textheight,figwidth=#1\textheight, figcolor=white]{}\end{center}}
+\newcommand{\caplab}[2]{\ifthenelse{\equal{#1}{nocap}}{}{\caption{#1}}\ifthenelse{\equal{#2}{nolab}}{}{\label{#2}}}
+\newcommand{\pic}[3]{\ifthenelse{\equal{#1}{r}}{\includegraphics[height={#2\linewidth}, angle=-90]{#3}}{\includegraphics[width={#2\linewidth}]{#3}}}
+%SUBFIG
+\DeclareDocumentCommand{\subfig}{O{.45} O{0} m O{n} m O{nocap} O{nolab}}{\begin{subfigure}{#1\linewidth}\vspace*{#2\textheight}\centering\pic{#4}{#3}{#5}\caplab{#6}{#7}\end{subfigure}}
+%SUBFIGS
+\DeclareDocumentCommand{\subfigs}{O{fig} m m O{nocap} O{nolab}}{\begin{figure}[ht!]\centering\ifthenelse{\equal{#1}{fig}}{}{#1\hspace*{.05\linewidth}}#2\hspace*{.05\linewidth}#3\caplab{#4}{#5}\end{figure}}
+%FIG
+\DeclareDocumentCommand{\fig}{O{n} m m O{nocap} O{nolab}}{\begin{figure}[ht!]\centering\pic{#1}{#2}{#3}\caplab{#4}{#5}\end{figure}}
+% WRAPFIG
+\DeclareDocumentCommand{\wrapfig}{O{l} m m O{nocap} O{nolab}}{
+	\begin{wrapfigure}{#1}{#2\linewidth}\includegraphics[width={.95\linewidth}]{#3}\caplab{#4}{#5}\end{wrapfigure}}
+\DeclareSIUnit\mhzcm{\mega\hertz\per\centi\meter^2}
+\DeclareSIUnit\khzcm{\kilo\hertz\per\centi\meter^2}
+\DeclareSIUnit\ncm{n\per\centi\meter^2}

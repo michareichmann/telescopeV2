@@ -1,0 +1,39 @@
+\documentclass[11pt]{article}
+\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=3cm]{geometry}
+
+\input{preamble/general}
+
+\documenttype{Documentation}
+\title{ETH Beam Telescope Version 2}
+\author{Michael Reichmann}
+\date{\today}
+\version{0.1}
+
+
+\makeindex
+\begin{document}
+
+% ========== TITLE PAGE WITH ABSTRACT ============
+\maketitle
+	
+% ========== MAIN PART OF THE DOCUMENT ===========
+
+\input{setup}
+\input{features}
+\input{simulation}
+	
+	
+% ========== APPENDIX STUFF ======================
+% 	\newpage
+% 	\pagenumbering{Roman}
+% 	\listoffigures
+% 	\listoftables
+\cleardoublepage
+\input{acros}
+	
+% ========== BIBLIOGRAPHY ========================
+% \newpage
+% \bibliographystyle{plain}
+% \bibliography{refs}
+
+\end{document}

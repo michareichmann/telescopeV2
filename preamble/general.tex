@@ -1,0 +1,25 @@
+% ---------------- GENERAL PREAMBLE SETTINGS ------------------------------------------
+\makeatletter 
+\def\input@path{ {sections/} {preamble/} {frontbackmatter/}} 
+
+\newcommand*{\version}[1]{\gdef\@version{#1}}
+\newcommand*{\@version}{0.0.0}
+\newcommand*{\documenttype}[1]{\gdef\@documenttype{#1}}
+\newcommand*{\@documenttype}{Documentation}
+\makeatother
+
+\input{packages}
+\input{commands}
+
+\graphicspath{ {figures/} }
+
+
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1pt\hfill \kern \z@}
+
+\newfontfamily\ubuntu{Ubuntu}
+\newfontfamily\dejavu{DejaVuSans}
+
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+
+\input{titlepage}

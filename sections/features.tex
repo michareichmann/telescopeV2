@@ -1,0 +1,30 @@
+\section{Features}
+\subsection{FAST-OR Trigger}
+\begin{itemize}
+	\item each plane generates a FAST-OR trigger if any of the pixels of this plane is hit during a clock cycle (\SI{40}{\MHz})
+	\item used to trigger the the whole setup
+	\item amplified on the adaptor planes (\ar{fig:pl})
+	\item after amplification: \SI{\sim100}{\mV} differential signal
+	\item needs to be converted to NIM-signal for the \ac{TU}
+	\item every plane needs LEMO out for the FAST-OR
+\end{itemize}
+\fig{.5}{NewPlane}[Plane adaptor dimensions with indicated FAST-OR amplification circuit.][fig:pl]
+
+\subsection{General Read-Out}
+\begin{itemize}
+	\item telescope read out by a \ac{DTB} that runs on a \SI{40}{\MHz} clock
+	\item \ac{DTB} provides clock to the planes
+	\item \ac{DTB} receives trigger from the \ac{TU}
+	\item \ac{DTB} sends a token-signal that  sequentially passes by the individual planes
+	\item \ac{ROC} sends data after receiving the token and issues a new token signal
+	\item jumpers on the \ac{MB} next to each plane in order to bypass the plane and send the token directly to the next plane
+	\begin{itemize}
+	\item[\ra] allows for different configurations and not connected planes
+	\end{itemize}
+
+\end{itemize}
+
+
+
+
+
